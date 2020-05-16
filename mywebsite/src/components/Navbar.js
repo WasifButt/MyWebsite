@@ -8,14 +8,14 @@ const Styles = styled.div`
     .navbar {
         background-color: #FF5733;
     }
-
     .navbar-brand, .navbar-nav, .navbar-link {
-        color: #bbb;
-        &:hover {
-            color: red;
-        }
+        color: black;
     }
-    
+
+    .nav-item > a:hover {
+    color: red;
+    }
+      
     .center-block {
         margin:0 auto; 
         float:left;
@@ -64,7 +64,7 @@ export const Navigation = (props) => (
             <Navbar.Toggle aria-controls = "basic-navbar-nav" />
             <Navbar.Collapse id = "basic-navbar-nav">
                 <Nav className="col-md-12 d-none d-md-block bg-light sidebar"
-                activeKey="/home"
+                activeKey="/"
                 onSelect={selectedKey => alert(`selected ${selectedKey}`)}>
                     <div class = "span12 center-block">
                         <Nav.Item><Link to="home" smooth = {true} duration = {1000}>Welcome</Link></Nav.Item>
