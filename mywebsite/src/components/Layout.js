@@ -7,7 +7,7 @@ import { Navigation } from './Navbar'
 export const Layout = (props) => (
     <Container fluid>
         <Row>
-            <Col><Navigation /></Col>
+            <Col id = "sidebar-wrapper"><Navigation /></Col>
             <Col xs = {11}>{props.children}</Col>
         </Row>
     </Container>
