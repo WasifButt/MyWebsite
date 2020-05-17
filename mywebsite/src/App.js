@@ -7,12 +7,11 @@ import { Home } from './Home';
 import { About } from './About'; 
 import { Experience } from './Experience';
 
-
 function App() {
   return (
     <React.Fragment>
       <Layout>
-        <section id = "home">
+        {/* <section id = "home">
           <Home />
         </section>
         <section id = "about">
@@ -20,7 +19,7 @@ function App() {
         </section>
         <section id = "experience">
           <Experience />
-        </section>
+        </section> */}
 
         {/* <Router>
           <Switch>

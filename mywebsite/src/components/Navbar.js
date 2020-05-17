@@ -5,25 +5,29 @@ import styled, { withTheme } from 'styled-components';
 import { Link } from 'react-scroll'
 
 const Styles = styled.div`
-    .navbar {
-        background-color: #FF5733;
-    }
     .navbar-brand, .navbar-nav, .navbar-link {
-        color: black;
+        color: grey;
+        font-weight: bold;
+        font-family: "Andale Mono";
+        font-size: 90%;
+        text-shadow: 0.5px 0.5px grey;
+
     }
 
     .nav-item > a:hover {
-    color: red;
+        color: white;
     }
-      
+
     .center-block {
-        margin:0 auto; 
         float:left;
-        text-align:left; 
+        text-align:center; 
         position: absolute;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+        line-height: 300%;
+        top: 38%;
+        -ms-transform: translateY(-25%);
+        transform: translateY(-25%);
+        -ms-transform: translateX(+5%);
+        transform: translateX(+5%);
     }
     
     .sidebar {
@@ -36,25 +40,6 @@ const Styles = styled.div`
         padding: 48px 0 0;
         box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
     }
-    #sidebar-wrapper{
-        min-height: 100vh !important;
-        width: 100vw;
-        margin-left: -1rem;
-        -webkit-transition: margin .25s ease-out;
-        -moz-transition: margin .25s ease-out;
-        -o-transition: margin .25s ease-out;
-        transition: margin .25s ease-out;
-    }
-    #sidebar-wrapper .sidebar-heading {
-        padding: 0.875rem 1.25rem;
-        font-size: 1.2rem;
-    }
-    #page-content-wrapper {
-        min-width: 0;
-        width: 100%;
-    }
-    
-    
 `;
 
 export const Navigation = (props) => (
@@ -63,13 +48,15 @@ export const Navigation = (props) => (
             <div className="sidebar-sticky"></div>
             <Navbar.Toggle aria-controls = "basic-navbar-nav" />
             <Navbar.Collapse id = "basic-navbar-nav">
-                <Nav className="col-md-12 d-none d-md-block bg-light sidebar"
+                <Nav className="col-md-12 d-none d-md-block sidebar"
                 activeKey="/"
                 onSelect={selectedKey => alert(`selected ${selectedKey}`)}>
                     <div class = "span12 center-block">
-                        <Nav.Item><Link to="home" smooth = {true} duration = {1000}>Welcome</Link></Nav.Item>
-                        <Nav.Item><Link to="about" smooth = {true} duration = {1000}>About Me!</Link></Nav.Item>
-                        <Nav.Item><Link to="experience" smooth = {true} duration = {1000}>My Experience</Link></Nav.Item>
+                        <Nav.Item><Link to="home" smooth = {true} duration = {1000}>WELCOME</Link></Nav.Item>
+                        <Nav.Item><Link to="about" smooth = {true} duration = {1000}>ABOUT ME</Link></Nav.Item>
+                        <Nav.Item><Link to="experience" smooth = {true} duration = {1000}>EXPERIENCES</Link></Nav.Item>
+                        <Nav.Item><Link to="experience" smooth = {true} duration = {1000}>SKILLS</Link></Nav.Item>
+                        <Nav.Item><Link to="experience" smooth = {true} duration = {1000}>INTERESTS</Link></Nav.Item>
                     </div>
                 </Nav>
             </Navbar.Collapse>
