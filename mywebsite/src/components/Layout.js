@@ -39,18 +39,19 @@ const Styles = styled.div`
     #contact {
         background-color: #928E6B;
     }
+    #jumbo_tron {
+        padding: 0;
+    }
 `;
 
 export const Layout = (props) => (
     <Styles>
-        <Container fluid>
-            <Row>
-                <Col xs = {1} id = "sidebar-wrapper"><Navigation /></Col>
-                <Col lg = {9}>
-                    <Jumbotron />
-                </Col>
-                <Col sm id = "contact">hello</Col>
-            </Row>
-        </Container>
+        <Row>
+            <Navigation />
+            <Col lg = {9} id = "jumbo_tron">
+                <Jumbotron />
+            </Col>
+            <Col sm id = "contact"></Col>
+        </Row>
     </Styles>
 )

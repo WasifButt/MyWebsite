@@ -15,15 +15,17 @@ const Styles = styled.div`
     background-size: cover;
     color: #efefef;
     height: 100%;
+    width: 100%;
     position: relative;
     z-index: -2;
     margin-bottom: 0 !important;
     min-height: 300px; 
+    
   }
 
   .overlay {
     background-color: #000;
-    opacity: 0.2;
+    opacity: 0.3;
     position: absolute;
     top: 0;
     left: 0;
@@ -33,9 +35,8 @@ const Styles = styled.div`
   }
   .center-main {
     margin:0 auto; 
-    float:left;
-    text-align:center; 
-    position: absolute;
+
+   
 }
 `;
 
@@ -44,15 +45,15 @@ export const Jumbotron = () => (
     <Jumbo fluid className="jumbo">
       <div className="overlay"></div>
       <Container fluid>
-        <Row id = "main-content-text">
-            <section id = "home" class =  "center-main"><Home /></section>
-        </Row>
-        <Row id = "main-content-text">
+        <div id = "main-content-text">
+            <section id = "home" class = "center-main"><Home /></section>
+        </div>
+        <div id = "main-content-text">
             <section id = "about"><About /></section>
-        </Row>
-        <Row id = "main-content-text">
+        </div>
+        <div id = "main-content-text">
             <section id = "experience"><Experience /></section>
-        </Row>
+        </div>
       </Container>
     </Jumbo>
   </Styles>
