@@ -42,16 +42,33 @@ const Styles = styled.div`
     #jumbo_tron {
         padding: 0;
     }
+    .openbtn {
+        width: 2%;
+        height: 5%;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        border: none;
+        position:absolute; 
+        top:0; 
+        right:0;
+      }
+      
+      .openbtn:hover {
+        background-color: #444;
+      }
+      
 `;
 
 export const Layout = (props) => (
     <Styles>
         <Row>
             <Navigation />
-            <Col lg = {9} id = "jumbo_tron">
+            <Col  id = "jumbo_tron">
                 <Jumbotron />
             </Col>
-            <Col sm id = "contact"></Col>
+            <button class="openbtn" onclick="openContact()">☰</button>
+            {/* <Col sm id = "contact"></Col> */}
         </Row>
     </Styles>
 )
