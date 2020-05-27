@@ -185,7 +185,7 @@ export const Navigation = (props) => (
                                         "factor": 1000
                                     },
                                     "limit": 0,
-                                    "value": 200
+                                    "value": 0//200              // THIS IS WHERE YOU CAN CHANGE HOW MANY DOTS ON SCREEN
                                 },
                                 "opacity": {
                                     "animation": {

@@ -34,7 +34,11 @@ const Styles = styled.div`
         background-color: #9FB9BB;
         margin-left: 30px;
         margin-right: 30px;
-
+        height:100%;
+        border-bottom-style: solid;
+        border-color: white;
+        border-width: 1px;
+        border-radius: 3px;
     }
     #contact {
         background-color: #928E6B;
@@ -67,7 +71,7 @@ export const Layout = (props) => (
             <Col  id = "jumbo_tron">
                 <Jumbotron />
             </Col>
-            <button class="openbtn" onclick="openContact()">☰</button>
+            <button class="openbtn sticky-top" onclick="openContact()">☰</button>
             {/* <Col sm id = "contact"></Col> */}
         </Row>
     </Styles>

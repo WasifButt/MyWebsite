@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { SocialIcon } from 'react-social-icons';
 
 const Styles = styled.div`
 .sidebar {
@@ -35,10 +36,26 @@ const Styles = styled.div`
     font-size: 36px;
     margin-left: 50px;
   }
+  #icon {
+    z-index: 100;
+    position: relative;   
+    padding-right: 5px; 
+  }
+  
 `;
 
+export const Icons = () => (
+  <Styles>
+    <a id="icon"><SocialIcon url="https://github.com/WasifButt" target="_blank" bgColor="black" fgColor = "white" style={{ paddingLeft: "50" }}/></a>
+    <a id="icon"><SocialIcon url="https://www.linkedin.com/in/buttwasif/" target="_blank" bgColor="black" fgColor = "white"/></a>
+    <a id="icon"><SocialIcon url="https://www.facebook.com/wasif.a.butt.9" target="_blank" bgColor="black" fgColor = "white"/></a>
+    <a id="icon"><SocialIcon url="https://www.instagram.com/instawab/?hl=en" target="_blank" bgColor="black" fgColor = "white"/></a>
+    <a id="icon"><SocialIcon url="https://drive.google.com/file/d/1RmlibKSV4RbnYVSbhNpS5GpJSBtB7xVk/view?usp=sharing" network="sharethis" id="icon" target="_blank" bgColor="black" fgColor = "white"/></a>
+  </Styles>
+)
+
 export const Contact = () => (
-    <div id="mySidebar" class="sidebar">
+  <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">yeet</a>
-</div>
+  </div>
 )
